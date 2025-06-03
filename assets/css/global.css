@@ -1,24 +1,87 @@
-/* Define a fonte padrão */
+* {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
-    background-color: #f6f8fc;
-  }
-  
-  /* Define o espaçamento interno dos elementos com classe "content" */
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  min-height: 100vh;
+}
+
+.content {
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem;
+  background-color: #fff;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1rem 2rem 0.5rem 2rem;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  margin: 0;
+  transition: transform 0.2s;
+}
+
+.logo:hover {
+  transform: scale(1.08) rotate(-8deg);
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    max-width: 350px;
+    margin-left: 2rem;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 0.5rem 2.5rem 0.5rem 1rem;
+    border-radius: 1.5rem;
+    border: 2px solid #ee1515;
+    font-size: 1rem;
+    outline: none;
+    background: #fff;
+    transition: border 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(255, 203, 5, 0.08);
+}
+
+#searchInput:focus {
+    border: 2px solid #ffcb05;
+    background: #fffbe6;
+    box-shadow: 0 2px 12px rgba(255, 203, 5, 0.18);
+}
+
+.search-icon {
+    position: absolute;
+    right: 0.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.4rem;
+    height: 1.4rem;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+@media screen and (min-width: 992px) {
   .content {
-    width: 100vh;
-    height: 100vh;
-    padding: 1rem;
-    background-color: #fff;
-    height: 100%;
+      max-width: 992px;
+      height: auto;
+      margin: 1rem auto;
+      border-radius: 1rem;
   }
-  @media screen and (min-width:992px) {
-    .content {
-        max-width: 992px;
-        height: auto;
-        margin: 1rem auto;
-        border-radius: 1rem;
-    }
-  }
-  
+}

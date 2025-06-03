@@ -1,3 +1,5 @@
+
+
 const pokeApi = {}
 
 function convertPokeApiDetailToPokemon(pokeDetail) {
